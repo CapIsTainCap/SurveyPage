@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!--Links-->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+        <title>
+            Survey Page 
+        </title>
+        <meta charset="utf-8">
+
+        <!--CSS-->
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                font-family: 'Montserrat', Century Gothic, Tahoma;
+                background: url(https://cdn.pixabay.com/photo/2019/07/19/23/16/power-plant-4349830_960_720.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: white;
+            }
+            .lob {
+                font-family: 'Lobster', 'Montserrat', Century Gothic, Tahoma;
+                font-weight: 200;
+                transition: 0.3s;
+                cursor:default;
+            }
+            .lob:hover {
+                opacity: 0.6;
+                transition: 0.4s;
+            }
+            .desc {
+                text-align: center;
+            }
+            .main {
+                background: rgba(12, 12, 75, 0.8);
+                padding: 0.5px;
+                border-radius: 5px;
+            }
+            #survey-form {
+                text-align: left;
+            }
+            .inp {
+                font-family: 'Montserrat', monospace;
+                padding: 6px;
+            }
+            .opt {
+                font-family: 'Montserrat', monospace;
+            }
+            .submit-input {
+                padding: 10px 20px 10px 20px;
+                border-radius: 8px;
+                transition: 0.3s;
+                cursor: pointer;
+            }
+            .submit-input:hover {
+                transform:translateY(-2px);
+                opacity: 0.7;
+                transition: 0.3s;
+            }
+            .all-div {
+                margin-left: 40px;
+                margin-top: 10px;
+                margin-bottom: 5px;
+            }
+        </style>
+
+    </head>
+    
+    <body>
+
+        <div class="main">
+            <div class="desc">
+
+                <h1 id="title">
+                    <span class="lob">changingClimate.org</span> Survey Form
+                </h1>
+
+                <p id="description">
+                    Please Give A Minute For Filling This Form :)
+                </p>
+                <hr>
+                <form id="survey-form">
+
+                    <br>
+
+                    <!--Name Input-->
+                    <div class="name-div all-div">
+
+                        <label for="name-input" id="name-label">
+                            Name
+                        </label>
+                        <br>
+                        <input type="text" id="name" class="name-input inp" placeholder="Enter Your Name" required>
+
+                    </div>
+
+                    <br>
+
+                    <!--Email Input-->
+                    <div class="email-div all-div">
+
+                        <label for="email-input" id="email-label">
+                            Email
+                        </label>
+                        <br>
+                        <input type="email" id="email" class="email-input inp" placeholder="Enter Your Email" required>
+
+                    </div>
+
+                    <br>
+
+                    <!--Age Input-->
+                    <div class="age-div all-div">
+
+                        <label for="age-input" id="number-label">
+                            Age (Optional)
+                        </label>
+                        <br>
+                        <input type="number" id="number" class="age-input inp" placeholder="Enter Your Age" min="7" max="99">
+
+                    </div>
+
+                    <br>
+
+                    <!--Dropdown (Your Role) Input-->
+                    <div class="drop-div all-div">
+
+                        <label for="drop-input" id="drop-label">
+                            How Do You Describe Yourself?
+                        </label>
+                        <br>
+                        <select class="drop-sel" name="select" id="dropdown" required>
+                            <option value="0" class="opt" disabled>
+                                Select An Option
+                            </option>
+                            <option value="1" class="opt">
+                                Student
+                            </option>
+                            <option value="2" class="opt">
+                                Teacher
+                            </option>
+                            <option value="3" class="opt">
+                                Environmentalist
+                            </option>
+                            <option value="4" class="opt">
+                                Other
+                            </option>
+                        </select>
+                    </div>
+
+                    <br>
+
+                    <!--Radio Div-->
+                    <div class="radio-div all-div">
+                        <p id="radio-label">
+                            What Do You For Transportation?
+                        </p>
+                        <!--First Radio-->
+                        <input type="radio" name="radio" class="inp" id="radio1" value="car" checked>
+                        <label for="">Car</label>
+                        <br>
+                        <!--Second Radio-->
+                        <input type="radio" name="radio" class="inp" id="radio2" value="cycle">
+                        <label for="">Bicycle</label>
+                        <br>
+                        <!--Third Radio-->
+                        <input type="radio" name="radio" class="inp" id="radio3" value="walk">
+                        <label for="">Walk</label>
+                        <br>
+                        <!--Fourth Radio-->
+                        <input type="radio" name="radio" class="inp" id="radio4" value="other">
+                        <label for="">Other</label>
+                    </div>
+
+                    <br>
+
+                    <!--Checkbox Div-->
+                    <div class="check-div all-div">
+                        <p id="check-label">
+                            How Will You Fight Climate Change? (Check All That Apply)
+                        </p>
+                        <!--First Checkbox-->
+                        <input type="checkbox"  name="check" id="check1" checked value="trees">
+                        <label for="">Plant More Trees</label>
+                        <br>
+                        <!--Second Checkbox-->
+                        <input type="checkbox" name="check" id="check2" value="donate">
+                        <label for="">Dontate Non-Profit Environmental Organisations</label>
+                        <br>
+                        <!--Third Checkbox-->
+                        <input type="checkbox" name="check" id="check3" value="oth">
+                        <label for="">Other (Please Specify In Your Ideas)</label>
+
+                    </div>
+                    <br>
+
+                    <!--Textarea Div-->
+                    <div class="all-div">
+
+                        <p id="text-label" class="inp">
+                            Tell Us Your Ideas
+                        </p>
+                        <textarea name="textarea" class="inp" id="textarea" rows="5" cols="50" placeholder="Tell Your Ideas Here">
+                            
+                        </textarea>
+                        <br>
+                        <br>
+                        <!--Submit Button-->
+                        <input type="submit" class="submit-input inp" value="Submit" id= "submit" >
+                    </div>
+                    </form>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+
+        <!--JavaScript-->
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+            console.log("Survey Page");
+        </script>
+    </body>
+</html>
